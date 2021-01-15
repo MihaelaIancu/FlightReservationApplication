@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Reservation Application</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<!--<h1></h1>-->
+<!--Admin <a th:href="@{/flights/admin/showAddFlight}">Mode</a> <br>-->
+<!--Swagger Documentation <a th:href="@{/swagger-ui.html}">here</a>-->
+
+
+<!--<section class="login-block">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-6 login-sec">-->
+<!--                <h2 class="text-center">How about booking a flight?</h2>-->
+<!--                <form action="loginUser" method="post" th:action="@{/loginUser}">-->
+<!--                    <button class="btn btn-dark" type="submit">Login here</button>-->
+<!--                </form>-->
+<!--        </div>-->
+<!--            <div class="col-md-6 login-sec">-->
+<!--                <h2 class="text-center">New to the application?</h2>-->
+<!--                <form action="registerUser" method="post" th:action="@{/registerUser}">-->
+<!--                    <button class="btn btn-dark" type="submit">Register here</button>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--            </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--<div th:class="container">-->
+<!--    <div th:class="row">-->
+        <div class="sidenav">
+            <div class="login-main-text">
+                <h2 style="color: maroon" class="pl-1"> Flight Reservation Application<br><br> Login Page</h2>
+                <br>
+                <p class="pl-1"> Login or register from here to access.</p>
+            </div>
+        </div>
+        <div class="main">
+            <div class="col-md-6 col-sm-12">
+                <div class="login-form">
+                    <br>
+                    <form action="loginUser" method="post" th:action="@{/loginUser}">
+<!--                        <div th:class="form-group">-->
+<!--                            <label>User Name</label>-->
+<!--                            <input th:type="text" th:class="form-control" th:placeholder="User Name">-->
+<!--                        </div>-->
+<!--                        <div th:class="form-group">-->
+<!--                            <label>Password</label>-->
+<!--                            <input th:type="password" th:class="form-control" th:placeholder="Password">-->
+<!--                        </div>-->
+                        How about booking a flight?<br>
+                        <button type="submit" class="btn btn-light">Login</button>
+                    </form>
+                    <br><br>
+                    <form action="registerUser" method="post" th:action="@{/registerUser}">
+                        New to the application?<br>
+                        <button type="submit" class="btn btn-secondary">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+<!--    </div>-->
+<!--</div>-->
+</body>
+</html>

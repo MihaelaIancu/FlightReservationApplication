@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Flights</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<table border="1" style="margin-top: 10px; margin-left: 10px; margin-right: 5px; text-align: center" align="center" cellpadding="5">
+    <tr class="p-2">
+        <td>Operating Airlines</td>
+        <td>Departure City</td>
+        <td>Arrival City</td>
+        <td>Departure time</td>
+    </tr>
+    <tr class="p-2" th:each="flight:${flights}">
+        <td th:text="${flight.getOperatingAirlines()}"></td>
+        <td th:text="${flight.departureCity}"></td>
+        <td th:text="${flight.arrivalCity}"></td>
+        <td th:text="${flight.dateOfDeparture}"></td>
+<!--        <td th:text="${flight.estimatedDepartureTime}"></td>-->
+        <td style="margin-left: 10px!important;"><a style="color: maroon;" th:href="@{'/reservation/'+${flight.id}}"> Select</a></td>
+    </tr>
+</table>
+</body>
+</html>

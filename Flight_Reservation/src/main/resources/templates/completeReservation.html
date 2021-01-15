@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete Reservation</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<h2 style="color: maroon" class="pl-2">Complete your reservation</h2>
+<br>
+<pre class="pl-1">Airlines: <span th:text="${flight.operatingAirlines}"></span><br/>
+Departure city: <span th:text="${flight.departureCity}"></span><br/>
+Arrival city: <span th:text="${flight.arrivalCity}"></span><br/>
+Departure date: <span th:text="${flight.dateOfDeparture}"></span>
+</pre>
+<pre class="pl-1">
+    <form th:action="@{/reservation/complete-reservation}" method="post">
+        <h3 class="pl-2">Passenger details</h3>
+        First Name: <input type="text" name="pFirstName">
+        Last Name: <input type="text" name="pLastName">
+        Email: <input type="text" name="pEmail">
+        Phone: <input type="text" name="pPhone">
+
+        <h3 class="pl-2">Card details</h3>
+        Name: <input type="text" name="nameOnCard">
+        Card number: <input type="text" name="cardNumber">
+        Expiry Date: <input type="text" name="expiryDate">
+        CVV Code: <input type="password" name="cvvNumber">
+
+        <input type="hidden" name="flightId" th:value="${flight.id}">
+        <input type="submit" class="btn btn-danger" value ="Book">
+    </form>
+</pre>
+</body>
+</html>
