@@ -5,7 +5,6 @@ SpringBoot Application that demonstrates REST API Development using Spring MVC, 
 * Java (Programming Language)
 * Spring Boot (Application Platform)
 * Spring Data JPA (Data persistence)
-* H2 (Database)
 * JUnit, with Spring Testing (Unit & Integration Testing)
 
 ###### API Documentation and Integration Testing
